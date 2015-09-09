@@ -1,4 +1,13 @@
-var app = angular.module("myHWApp", ["ngRoute"]);
+var app = angular.module("myHWApp", ["ngRoute",'ng-token-auth']);
+
+app.config(["$authProvider", function($authProvider) {
+    $authProvider.configure({
+      apiUrl: 'http://localhost:3000'
+      authProviderPaths: {
+        github: '/auth/google_oauth2' // <-- note that this is different than what was set with github
+      }
+    });
+  }]);
 
 app.config(["$httpProvider", function($httpProvider) {
 	$httpProvider.defaults.headers.common['X-CSRF-Token'] =
@@ -11,4 +20,9 @@ app.config(["$routeProvider", function ($routeProvider){
 		templateUrl: 'partials/home.html',
 		controller: 'HomeController'
 	});
+	.when('/login', {
+		templateUrl: 'partials/login.html',
+		controller: 'LoginController'
+	});
+	.otherwise({ redirectTo: '/'})
 }]);

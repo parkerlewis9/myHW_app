@@ -1,4 +1,9 @@
 class Student < ActiveRecord::Base
+  # Include default devise modules.
+  devise :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :trackable, :validatable,
+          :confirmable, :omniauthable
+  include DeviseTokenAuth::Concerns::User
 has_many :course_students, dependent: :destroy
 has_many :courses, through: :course_students
 
