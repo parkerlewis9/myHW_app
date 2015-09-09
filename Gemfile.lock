@@ -165,6 +165,7 @@ GEM
       pry (>= 0.9.10)
     puma (2.13.4)
     rack (1.6.4)
+    rack-rewrite (1.5.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.3)
@@ -259,6 +260,7 @@ DEPENDENCIES
   pg
   pry-rails
   puma
+  rack-rewrite
   rails (= 4.2.3)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

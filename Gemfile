@@ -14,6 +14,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+
+
+
+
 #Devise gem for authentication
 gem 'devise_token_auth'
 
@@ -24,6 +28,12 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-google-oauth2'
 gem 'json'
+
+gem 'rack-rewrite'
+
+
+
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
