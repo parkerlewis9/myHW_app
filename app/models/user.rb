@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
 
+	acts_as_copy_target
+
+
+
 
 	has_many :documents
 
